@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using FilesManager;
 
-namespace EMAnalizer_2._0
+namespace Core
 {
     public class PDS
     {
