@@ -669,13 +669,13 @@ namespace EMAnalizer_2._0
         {
             int i = toolStripComboBox1.SelectedIndex;
 
-            chart1.Series["Señal Horizontal"].Points.DataBindY(P.SHorizontal[i]);
+            chart1.Series[0].Points.DataBindY(P.SHorizontal[i]);
             if (mostrarSeñalVerticalToolStripMenuItem.Checked)
             {
-                chart1.Series["Señal Vertical"].Points.DataBindY(P.SVertical[i]);
+                chart1.Series[1].Points.DataBindY(P.SVertical[i]);
             }
-            else { chart1.Series["Señal Vertical"].Points.Clear(); }
-            chart1.Series["Estímulo"].Points.DataBindY(P.SEstimulo[i]);
+            else { chart1.Series[1].Points.Clear(); }
+            chart1.Series[2].Points.DataBindY(P.SEstimulo[i]);
             chart1.Series[3].Points.DataBindXY(P.SacadasI[i], P.SacadasYI[i]);
             chart1.Series[4].Points.DataBindXY(P.SacadasF[i], P.SacadasYF[i]);            
 
