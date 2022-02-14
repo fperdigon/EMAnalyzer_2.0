@@ -9,14 +9,14 @@ using System.Windows.Forms;
 
 namespace EMAnalizer_2._0
 {
-    public partial class Diagramas_estadisticos : Form
+    public partial class StatisticalDiagramsForm : Form
     {
         Pruebas P;
-        public Diagramas_estadisticos()
+        public StatisticalDiagramsForm()
         {
             InitializeComponent();
         }
-        public Diagramas_estadisticos(Pruebas p)
+        public StatisticalDiagramsForm(Pruebas p)
         {
             InitializeComponent();
             P = p;

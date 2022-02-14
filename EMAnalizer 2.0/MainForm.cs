@@ -186,7 +186,7 @@ namespace EMAnalizer_2._0
             }
             else
             {
-                Diagramas_estadisticos f = new Diagramas_estadisticos(P);
+                StatisticalDiagramsForm f = new StatisticalDiagramsForm(P);
                 f.ShowDialog();
             }
         }
@@ -465,7 +465,7 @@ namespace EMAnalizer_2._0
             }
             else
             {
-                Tables f = new Tables(P);
+                TableForm f = new TableForm(P);
                 f.ShowDialog();
             }
         }

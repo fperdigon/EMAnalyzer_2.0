@@ -70,11 +70,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Diagramas estadisticos.cs">
+    <Compile Include="StatisticalDiagramsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Diagramas estadisticos.Designer.cs">
-      <DependentUpon>Diagramas estadisticos.cs</DependentUpon>
+    <Compile Include="StatisticalDiagramsForm.Designer.cs">
+      <DependentUpon>StatisticalDiagramsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -84,15 +84,15 @@
     </Compile>
     <Compile Include="MainProgram.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tables.cs">
+    <Compile Include="TableForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tables.Designer.cs">
-      <DependentUpon>Tables.cs</DependentUpon>
+    <Compile Include="TableForm.Designer.cs">
+      <DependentUpon>TableForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Core.cs" />
-    <EmbeddedResource Include="Diagramas estadisticos.resx">
-      <DependentUpon>Diagramas estadisticos.cs</DependentUpon>
+    <EmbeddedResource Include="StatisticalDiagramsForm.resx">
+      <DependentUpon>StatisticalDiagramsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -107,8 +107,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Tables.resx">
-      <DependentUpon>Tables.cs</DependentUpon>
+    <EmbeddedResource Include="TableForm.resx">
+      <DependentUpon>TableForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
