@@ -465,7 +465,7 @@ namespace EMAnalizer_2._0
             }
             else
             {
-                Tablas f = new Tablas(P);
+                Tables f = new Tables(P);
                 f.ShowDialog();
             }
         }

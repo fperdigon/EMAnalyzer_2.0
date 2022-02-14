@@ -9,10 +9,10 @@ using System.Windows.Forms;
 
 namespace EMAnalizer_2._0
 {
-    public partial class Tablas : Form
+    public partial class Tables : Form
     {        
 
-        public Tablas(Pruebas P)
+        public Tables(Pruebas P)
         {
             InitializeComponent();
 

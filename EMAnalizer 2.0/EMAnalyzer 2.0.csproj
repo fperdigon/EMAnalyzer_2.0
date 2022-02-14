@@ -84,11 +84,11 @@
     </Compile>
     <Compile Include="MainProgram.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tablas.cs">
+    <Compile Include="Tables.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tablas.Designer.cs">
-      <DependentUpon>Tablas.cs</DependentUpon>
+    <Compile Include="Tables.Designer.cs">
+      <DependentUpon>Tables.cs</DependentUpon>
     </Compile>
     <Compile Include="Core.cs" />
     <EmbeddedResource Include="Diagramas estadisticos.resx">
@@ -107,8 +107,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Tablas.resx">
-      <DependentUpon>Tablas.cs</DependentUpon>
+    <EmbeddedResource Include="Tables.resx">
+      <DependentUpon>Tables.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
