@@ -191,7 +191,7 @@ namespace EMAnalizer_2._0
             
             if (P == null)
             {
-                MessageBox.Show("No hay datos que mostar, cargue una prueba.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("There is no data to show, please load a test file.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -221,7 +221,7 @@ namespace EMAnalizer_2._0
             }
             else
             {
-                MessageBox.Show("No se puede realizar esta operación, cargue una prueba.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Operation not permited, please load a test file.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -244,7 +244,7 @@ namespace EMAnalizer_2._0
                 }
              }
              else {
-                MessageBox.Show("No se puede realizar esta operación, cargue una prueba.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Operation not permited, please load a test file.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -269,7 +269,7 @@ namespace EMAnalizer_2._0
             }
              else
              {
-                 MessageBox.Show("No se puede realizar esta operación, cargue una prueba.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                 MessageBox.Show("Operation not permited, please load a test file.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
              }
         }
 
@@ -470,7 +470,7 @@ namespace EMAnalizer_2._0
         {
             if (P == null)
             {
-                MessageBox.Show("No hay datos que mostar, cargue una prueba.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("There is no data to show, please load a test file.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
