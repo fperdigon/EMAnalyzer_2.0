@@ -1,0 +1,11 @@
+# Folders to ignore
+/EMAnalizer 2.0/bin/*
+/EMAnalizer 2.0/obj/*
+
+# Files to ignore
+*.csv
+*.cdc
+*.inf
+*.mrk
+*.pat
+*.plg
