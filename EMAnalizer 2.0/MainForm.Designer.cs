@@ -275,24 +275,24 @@
         	series2.Color = System.Drawing.Color.Lime;
         	series2.Legend = "Legend1";
         	series2.Name = "Vertical signal";
+        	series3.BorderWidth = 2;
         	series3.ChartArea = "ChartArea1";
-        	series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-        	series3.Color = System.Drawing.Color.Red;
+        	series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+        	series3.Color = System.Drawing.Color.Orange;
         	series3.Legend = "Legend1";
-        	series3.MarkerSize = 8;
-        	series3.Name = "Sacade start";
+        	series3.Name = "Stimulus";
         	series4.ChartArea = "ChartArea1";
         	series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-        	series4.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+        	series4.Color = System.Drawing.Color.Red;
         	series4.Legend = "Legend1";
         	series4.MarkerSize = 8;
-        	series4.Name = "Sacade end";
-        	series5.BorderWidth = 2;
+        	series4.Name = "Sacade start";
         	series5.ChartArea = "ChartArea1";
-        	series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-        	series5.Color = System.Drawing.Color.Orange;
+        	series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+        	series5.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
         	series5.Legend = "Legend1";
-        	series5.Name = "Stimulus";
+        	series5.MarkerSize = 8;
+        	series5.Name = "Sacade end";
         	this.chart1.Series.Add(series1);
         	this.chart1.Series.Add(series2);
         	this.chart1.Series.Add(series3);
@@ -342,7 +342,7 @@
         	this.toolStripButton1.Name = "toolStripButton1";
         	this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
         	this.toolStripButton1.Text = "toolStripButton1";
-        	this.toolStripButton1.ToolTipText = "Abrir un archivo";
+        	this.toolStripButton1.ToolTipText = "Open a file";
         	this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
         	// 
         	// toolStripButton2
@@ -353,7 +353,7 @@
         	this.toolStripButton2.Name = "toolStripButton2";
         	this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
         	this.toolStripButton2.Text = "toolStripButton2";
-        	this.toolStripButton2.ToolTipText = "Guardar en formato *.ema";
+        	this.toolStripButton2.ToolTipText = "Save in *.ema format";
         	// 
         	// toolStripSeparator1
         	// 
@@ -368,7 +368,7 @@
         	this.toolStripButton3.Name = "toolStripButton3";
         	this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
         	this.toolStripButton3.Text = "toolStripButton3";
-        	this.toolStripButton3.ToolTipText = "Aumentar Zoom";
+        	this.toolStripButton3.ToolTipText = "Zoom in";
         	this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
         	// 
         	// toolStripButton4
@@ -379,7 +379,7 @@
         	this.toolStripButton4.Name = "toolStripButton4";
         	this.toolStripButton4.Size = new System.Drawing.Size(23, 22);
         	this.toolStripButton4.Text = "toolStripButton4";
-        	this.toolStripButton4.ToolTipText = "Disminuir Zoom";
+        	this.toolStripButton4.ToolTipText = "Zoom out";
         	this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
         	// 
         	// toolStripButton5
@@ -390,7 +390,7 @@
         	this.toolStripButton5.Name = "toolStripButton5";
         	this.toolStripButton5.Size = new System.Drawing.Size(23, 22);
         	this.toolStripButton5.Text = "toolStripButton5";
-        	this.toolStripButton5.ToolTipText = "Reajustar Zoom";
+        	this.toolStripButton5.ToolTipText = "Reset Zoom";
         	this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
         	// 
         	// toolStripSeparator2
@@ -403,7 +403,7 @@
         	this.toolStripComboBox1.MergeIndex = 1;
         	this.toolStripComboBox1.Name = "toolStripComboBox1";
         	this.toolStripComboBox1.Size = new System.Drawing.Size(150, 25);
-        	this.toolStripComboBox1.ToolTipText = "Seleccionar prueba";
+        	this.toolStripComboBox1.ToolTipText = "Select test";
         	this.toolStripComboBox1.TextChanged += new System.EventHandler(this.toolStripComboBox1_TextChanged);
         	// 
         	// toolStripButton6
@@ -414,7 +414,7 @@
         	this.toolStripButton6.Name = "toolStripButton6";
         	this.toolStripButton6.Size = new System.Drawing.Size(23, 22);
         	this.toolStripButton6.Text = "toolStripButton6";
-        	this.toolStripButton6.ToolTipText = "Prueba anterior";
+        	this.toolStripButton6.ToolTipText = "Previous test";
         	this.toolStripButton6.Click += new System.EventHandler(this.toolStripButton6_Click);
         	// 
         	// toolStripButton7
@@ -425,7 +425,7 @@
         	this.toolStripButton7.Name = "toolStripButton7";
         	this.toolStripButton7.Size = new System.Drawing.Size(23, 22);
         	this.toolStripButton7.Text = "toolStripButton7";
-        	this.toolStripButton7.ToolTipText = "Prueba siguiente";
+        	this.toolStripButton7.ToolTipText = "Next Test";
         	this.toolStripButton7.Click += new System.EventHandler(this.toolStripButton7_Click);
         	// 
         	// toolStripSeparator3
@@ -441,7 +441,7 @@
         	this.toolStripButton9.Name = "toolStripButton9";
         	this.toolStripButton9.Size = new System.Drawing.Size(23, 22);
         	this.toolStripButton9.Text = "toolStripButton9";
-        	this.toolStripButton9.ToolTipText = "Eliminar sácada";
+        	this.toolStripButton9.ToolTipText = "Delete sacade";
         	this.toolStripButton9.Click += new System.EventHandler(this.toolStripButton9_Click);
         	// 
         	// toolStripButton10
@@ -452,7 +452,7 @@
         	this.toolStripButton10.Name = "toolStripButton10";
         	this.toolStripButton10.Size = new System.Drawing.Size(23, 22);
         	this.toolStripButton10.Text = "toolStripButton10";
-        	this.toolStripButton10.ToolTipText = "Insertar sácada";
+        	this.toolStripButton10.ToolTipText = "Insert sacade";
         	this.toolStripButton10.Click += new System.EventHandler(this.toolStripButton10_Click);
         	// 
         	// toolStripButton11
@@ -463,7 +463,7 @@
         	this.toolStripButton11.Name = "toolStripButton11";
         	this.toolStripButton11.Size = new System.Drawing.Size(23, 22);
         	this.toolStripButton11.Text = "toolStripButton11";
-        	this.toolStripButton11.ToolTipText = "Mover punto";
+        	this.toolStripButton11.ToolTipText = "Move point";
         	this.toolStripButton11.Click += new System.EventHandler(this.toolStripButton11_Click);
         	// 
         	// toolStripSeparator4
@@ -478,7 +478,7 @@
         	this.toolStripButton12.ImageTransparentColor = System.Drawing.Color.Magenta;
         	this.toolStripButton12.Name = "toolStripButton12";
         	this.toolStripButton12.Size = new System.Drawing.Size(23, 22);
-        	this.toolStripButton12.Text = "Diagramas estadísticos";
+        	this.toolStripButton12.Text = "Open statistical diagrams";
         	this.toolStripButton12.Click += new System.EventHandler(this.toolStripButton12_Click);
         	// 
         	// toolStripButton13
@@ -488,8 +488,8 @@
         	this.toolStripButton13.ImageTransparentColor = System.Drawing.Color.Magenta;
         	this.toolStripButton13.Name = "toolStripButton13";
         	this.toolStripButton13.Size = new System.Drawing.Size(23, 22);
-        	this.toolStripButton13.Text = "toolStripButton13";
-        	this.toolStripButton13.ToolTipText = "Tablas estadísticas";
+        	this.toolStripButton13.Text = "Open statistical tables";
+        	this.toolStripButton13.ToolTipText = "Open statistical tables";
         	this.toolStripButton13.Click += new System.EventHandler(this.toolStripButton13_Click);
         	// 
         	// toolStripSeparator5
@@ -504,8 +504,8 @@
         	this.toolStripButton8.ImageTransparentColor = System.Drawing.Color.Magenta;
         	this.toolStripButton8.Name = "toolStripButton8";
         	this.toolStripButton8.Size = new System.Drawing.Size(23, 22);
-        	this.toolStripButton8.Text = "toolStripButton8";
-        	this.toolStripButton8.ToolTipText = "Ayuda";
+        	this.toolStripButton8.Text = "Help";
+        	this.toolStripButton8.ToolTipText = "Help";
         	// 
         	// MainForm
         	// 
