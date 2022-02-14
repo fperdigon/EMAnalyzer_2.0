@@ -6,7 +6,7 @@ using FilesManager;
 
 namespace Core
 {
-    public class PDS
+    public class DSP
     {
 
 
@@ -23,7 +23,7 @@ namespace Core
          la señal y como resultado se obtiene una señal filtrada sin la demora
          experimentada en un filtro unidirecional*/
 
-        public static float[] Filtro(float[] S, int frecuencia)
+        public static float[] Filter(float[] S, int frecuencia)
         {
 
             double[,] CoefButt =
@@ -189,7 +189,7 @@ namespace Core
                         if (DSignal[j] > DSignal[PMaxDSignal]) PMaxDSignal = j;
                     }
 
-                    Sacades[i * 2] = MAreaTriangulo(Signal, PMaxDStimulus[i], PMaxDSignal);
+                    Sacades[i * 2] = Maximum_Point_Triangulation_Area(Signal, PMaxDStimulus[i], PMaxDSignal);
 
                     PMinDS = PMaxDSignal;
                     /*pto = (int) (PMaxDE[i + 1] - PMaxDE[i]) / 2;
@@ -199,7 +199,7 @@ namespace Core
                     {
                         if (DSignal[PMinDS] > DSignal[j] && DSignal[j] > 0) PMinDS = j;
                     }
-                    Sacades[i * 2 + 1] = MAreaTriangulo(Signal, PMaxDSignal, PMinDS + 5);
+                    Sacades[i * 2 + 1] = Maximum_Point_Triangulation_Area(Signal, PMaxDSignal, PMinDS + 5);
                 }
                 else
                 {
@@ -208,7 +208,7 @@ namespace Core
                     {
                         if (DSignal[j] < DSignal[PMaxDSignal]) PMaxDSignal = j;
                     }
-                    Sacades[i * 2] = MAreaTriangulo(Signal, PMaxDStimulus[i], PMaxDSignal);
+                    Sacades[i * 2] = Maximum_Point_Triangulation_Area(Signal, PMaxDStimulus[i], PMaxDSignal);
 
                     PMinDS = PMaxDSignal;
                     /*pto = (int)(PMaxDE[i + 1] - PMaxDE[i]) / 2;
@@ -218,14 +218,14 @@ namespace Core
                     {
                         if (DSignal[PMinDS] < DSignal[j] && DSignal[j] < 0) PMinDS = j;
                     }
-                    Sacades[i * 2 + 1] = MAreaTriangulo(Signal, PMaxDSignal, PMinDS + 5);
+                    Sacades[i * 2 + 1] = Maximum_Point_Triangulation_Area(Signal, PMaxDSignal, PMinDS + 5);
                 }
             }
 
             return Sacades;
         }
 
-        static int MAreaTriangulo(float[] S, int inicio, int fin)
+        static int Maximum_Point_Triangulation_Area(float[] S, int inicio, int fin)
         {
             double la, lb, lc;
             int index = inicio;
@@ -293,8 +293,8 @@ namespace Core
                 //Fs = plg.FrecMuestreo;
                 Fs = 200;
                 
-                plg.RSignals[0] = PDS.Filtro(plg.RSignals[0], indfh); 
-                plg.RSignals[1] = PDS.Filtro(plg.RSignals[1], indfh); 
+                plg.RSignals[0] = DSP.Filter(plg.RSignals[0], indfh); 
+                plg.RSignals[1] = DSP.Filter(plg.RSignals[1], indfh); 
                 MRK2Estimulo(plg.Marcas, plg.IDMarcas, plg); //aqui se distribuyen las señales
                 
                 //calibracion sacadica
@@ -336,8 +336,8 @@ namespace Core
                 
                 //calibracion sacadica
                 for (int i = 0; i < CantPruebas; i++){
-                    SHorizontal[i] = PDS.Filtro(csv.SignalsH[i], indfh);  
-                    SVertical[i] = PDS.Filtro(csv.SignalsV[i], indfh);
+                    SHorizontal[i] = DSP.Filter(csv.SignalsH[i], indfh);  
+                    SVertical[i] = DSP.Filter(csv.SignalsV[i], indfh);
                     if (NomPrueba[i] == "Calibración 30º")
                     {
                         if (CalInd1 == -1) { CalInd1 = i; }
@@ -367,8 +367,8 @@ namespace Core
                 }
 
                 //Asignación de los puntos de sacadas
-                Sacadas[i] = PDS.SacadeDet(SHorizontal[i], SEstimulo[i]);
-                CE[i] = PDS.SacadeDet(SEstimulo[i], SEstimulo[i]);
+                Sacadas[i] = DSP.SacadeDet(SHorizontal[i], SEstimulo[i]);
+                CE[i] = DSP.SacadeDet(SEstimulo[i], SEstimulo[i]);
 
                 SacadasY[i] = new float[Sacadas[i].Length];
                 SacadasT[i] = new float[Sacadas[i].Length];
@@ -718,8 +718,8 @@ namespace Core
             int[] sacadas1, sacadas2;
             int total1, total2;
             float Cali1, Cali2;
-            sacadas1 = PDS.SacadeDet(Cal1, Est1);
-            sacadas2 = PDS.SacadeDet(Cal2, Est2);
+            sacadas1 = DSP.SacadeDet(Cal1, Est1);
+            sacadas2 = DSP.SacadeDet(Cal2, Est2);
 
             total1 = sacadas1.Length / 2;// /2 pq hay inicio y fin
             total2 = sacadas2.Length / 2;
@@ -749,7 +749,7 @@ namespace Core
             int[] sacadas1;
             int total1;
             float Cali1;
-            sacadas1 = PDS.SacadeDet(Cal1, Est1);
+            sacadas1 = DSP.SacadeDet(Cal1, Est1);
             
 
             total1 = sacadas1.Length / 2;
