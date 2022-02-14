@@ -12,12 +12,12 @@ namespace EMAnalizer_2._0
 {
     public partial class StatisticalDiagramsForm : Form
     {
-        Pruebas P;
+        Test_T P;
         public StatisticalDiagramsForm()
         {
             InitializeComponent();
         }
-        public StatisticalDiagramsForm(Pruebas p)
+        public StatisticalDiagramsForm(Test_T p)
         {
             InitializeComponent();
             P = p;

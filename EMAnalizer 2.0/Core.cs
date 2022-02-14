@@ -249,7 +249,7 @@ namespace Core
 
     }
 
-    public class Pruebas
+    public class Test_T
     {
         public string[] NomPrueba;
         public int CantPruebas;
@@ -282,7 +282,7 @@ namespace Core
         public float Calibracion;
         public float AngCal = 0; //Angulo de calibracion plg=33, csv= 30;  
 
-        public Pruebas(string direccion)
+        public Test_T(string direccion)
         {
             //opcion para los PLG
             if (direccion.Contains(".inf") || direccion.Contains(".INF"))
@@ -805,7 +805,7 @@ namespace Core
         }
     }
 
-    public class Pto
+    public class Point_T
     {
         static public int X = 0;
         static public float Y = 0;

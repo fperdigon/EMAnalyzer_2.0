@@ -13,7 +13,7 @@ namespace EMAnalizer_2._0
        
     public partial class MainForm : Form
     {
-        Pruebas P;
+        Test_T P;
 
         bool EliminaP = false;
         bool AgregaP = false;
@@ -52,7 +52,7 @@ namespace EMAnalizer_2._0
                 dibujar = false; 
             }*/
 
-            P = new Pruebas(@openFileDialog1.FileName);
+            P = new Test_T(@openFileDialog1.FileName);
 
             if (openFileDialog1.FileName == "" || P == null) dibujar = false;
             if (openFileDialog1.FileName.Contains(".csv") || openFileDialog1.FileName.Contains(".CVS")) {
@@ -110,8 +110,8 @@ namespace EMAnalizer_2._0
              * 0 Horizontal signal
              * 1 Vertical signal
              * 2 Stimulus signal
-             * 3 Sacades start
-             * 4 Sacades end           
+             * 3 Sacade start
+             * 4 Sacade end           
             */
             
             chart1.Series[0].Points.DataBindY(P.SHorizontal[i]);
@@ -290,10 +290,10 @@ namespace EMAnalizer_2._0
 
             
             if (EliminaP ) {
-                for (int i = 0; i < chart1.Series["Inicio de sácada"].Points.Count; i++)
+                for (int i = 0; i < chart1.Series[3].Points.Count; i++)
                 {
-                    X = chart1.Series["Inicio de sácada"].Points[i].XValue;
-                    Y = chart1.Series["Inicio de sácada"].Points[i].YValues;
+                    X = chart1.Series[3].Points[i].XValue;
+                    Y = chart1.Series[3].Points[i].YValues;
                     if (X >= Xe - 10 && X <= Xe + 10 && Y[0] >= Ye - 0.8 && Y[0] <= Ye + 0.8)
                     {
                         pos = i;
@@ -301,10 +301,10 @@ namespace EMAnalizer_2._0
                     }
                 }
 
-                for (int i = 0; i < chart1.Series["Fin de sácada"].Points.Count; i++)
+                for (int i = 0; i < chart1.Series[4].Points.Count; i++)
                 {
-                    X = chart1.Series["Fin de sácada"].Points[i].XValue;
-                    Y = chart1.Series["Fin de sácada"].Points[i].YValues;
+                    X = chart1.Series[4].Points[i].XValue;
+                    Y = chart1.Series[4].Points[i].YValues;
                     if (X >= Xe - 10 && X <= Xe + 10 && Y[0] >= Ye - 0.8 && Y[0] <= Ye + 0.8)
                     {
                         pos = i;
@@ -312,25 +312,25 @@ namespace EMAnalizer_2._0
                     }
                 }
                 if (pos != -1){
-                    chart1.Series["Inicio de sácada"].Points.RemoveAt(pos);
-                    chart1.Series["Fin de sácada"].Points.RemoveAt(pos);
+                    chart1.Series[3].Points.RemoveAt(pos);
+                    chart1.Series[4].Points.RemoveAt(pos);
                 }
 
                 //Salva en los arregloa que contienen los puntos
-                P.SacadasI[ind] = new int[chart1.Series["Inicio de sácada"].Points.Count];
-                P.SacadasF[ind] = new int[chart1.Series["Fin de sácada"].Points.Count];
-                P.SacadasYI[ind] = new float[chart1.Series["Inicio de sácada"].Points.Count];
-                P.SacadasYF[ind] = new float[chart1.Series["Fin de sácada"].Points.Count];
-                P.SacadasTI[ind] = new float[chart1.Series["Inicio de sácada"].Points.Count];
-                P.SacadasTF[ind] = new float[chart1.Series["Fin de sácada"].Points.Count];
+                P.SacadasI[ind] = new int[chart1.Series[3].Points.Count];
+                P.SacadasF[ind] = new int[chart1.Series[4].Points.Count];
+                P.SacadasYI[ind] = new float[chart1.Series[3].Points.Count];
+                P.SacadasYF[ind] = new float[chart1.Series[4].Points.Count];
+                P.SacadasTI[ind] = new float[chart1.Series[3].Points.Count];
+                P.SacadasTF[ind] = new float[chart1.Series[4].Points.Count];
 
                 for (int i = 0; i < P.SacadasI[ind].Length; i++) {
-                    P.SacadasI[ind][i] = (int)chart1.Series["Inicio de sácada"].Points[i].XValue;
-                    P.SacadasF[ind][i] = (int)chart1.Series["Fin de sácada"].Points[i].XValue;
-                    P.SacadasYI[ind][i] = (float) chart1.Series["Inicio de sácada"].Points[i].YValues[0];
-                    P.SacadasYF[ind][i] = (float) chart1.Series["Fin de sácada"].Points[i].YValues[0];
-                    P.SacadasTI[ind][i] = (float)chart1.Series["Inicio de sácada"].Points[i].XValue/P.Fs;
-                    P.SacadasTF[ind][i] = (float)chart1.Series["Fin de sácada"].Points[i].XValue / P.Fs;
+                    P.SacadasI[ind][i] = (int)chart1.Series[3].Points[i].XValue;
+                    P.SacadasF[ind][i] = (int)chart1.Series[4].Points[i].XValue;
+                    P.SacadasYI[ind][i] = (float) chart1.Series[3].Points[i].YValues[0];
+                    P.SacadasYF[ind][i] = (float) chart1.Series[4].Points[i].YValues[0];
+                    P.SacadasTI[ind][i] = (float)chart1.Series[3].Points[i].XValue/P.Fs;
+                    P.SacadasTF[ind][i] = (float)chart1.Series[4].Points[i].XValue / P.Fs;
                 }
                 
                 chart1.Cursor = Cursors.Default;
@@ -351,13 +351,13 @@ namespace EMAnalizer_2._0
                 bool tranc = false;
                 if (AgregaP1)
                 { //pto inicio
-                    chart1.Series["Inicio de sácada"].Points.InsertXY(0, Xe, P.SHorizontal[ind][(int)Xe]);
+                    chart1.Series[3].Points.InsertXY(0, Xe, P.SHorizontal[ind][(int)Xe]);
                     AgregaP1 = false;
                     X1 = (int)Xe;
 
-                    Array.Resize(ref P.SacadasI[ind], chart1.Series["Inicio de sácada"].Points.Count);
+                    Array.Resize(ref P.SacadasI[ind], chart1.Series[3].Points.Count);
 
-                    tmpS = new int[chart1.Series["Inicio de sácada"].Points.Count];
+                    tmpS = new int[chart1.Series[3].Points.Count];
 
                     P.SacadasI[ind].CopyTo(tmpS, 0);
                     tranc = false;
@@ -384,7 +384,7 @@ namespace EMAnalizer_2._0
                     }
                 }
                 else { //Pto final
-                    chart1.Series["Fin de sácada"].Points.InsertXY(0, Xe, P.SHorizontal[ind][(int)Xe]);
+                    chart1.Series[4].Points.InsertXY(0, Xe, P.SHorizontal[ind][(int)Xe]);
                     AgregaP1 = true;
                     AgregaP = false;
                     chart1.Cursor = Cursors.Default;
@@ -393,13 +393,13 @@ namespace EMAnalizer_2._0
                    
                     X2 = (int)Xe;
 
-                    Array.Resize(ref P.SacadasF[ind], chart1.Series["Fin de sácada"].Points.Count);
-                    P.SacadasYI[ind] = new float[chart1.Series["Inicio de sácada"].Points.Count];
-                    P.SacadasYF[ind] = new float[chart1.Series["Fin de sácada"].Points.Count];
-                    P.SacadasTI[ind] = new float[chart1.Series["Inicio de sácada"].Points.Count];
-                    P.SacadasTF[ind] = new float[chart1.Series["Fin de sácada"].Points.Count];
+                    Array.Resize(ref P.SacadasF[ind], chart1.Series[4].Points.Count);
+                    P.SacadasYI[ind] = new float[chart1.Series[3].Points.Count];
+                    P.SacadasYF[ind] = new float[chart1.Series[4].Points.Count];
+                    P.SacadasTI[ind] = new float[chart1.Series[3].Points.Count];
+                    P.SacadasTF[ind] = new float[chart1.Series[4].Points.Count];
 
-                    tmpS = new int[chart1.Series["Fin de sácada"].Points.Count];
+                    tmpS = new int[chart1.Series[4].Points.Count];
                     P.SacadasF[ind].CopyTo(tmpS, 0);
                     tranc = false;
 
@@ -502,120 +502,120 @@ namespace EMAnalizer_2._0
 
                 int ind = toolStripComboBox1.SelectedIndex; 
 
-                for (int i = 0; i < chart1.Series["Inicio de sácada"].Points.Count; i++)
+                for (int i = 0; i < chart1.Series[3].Points.Count; i++)
                 {
-                    X = chart1.Series["Inicio de sácada"].Points[i].XValue;
-                    Y = chart1.Series["Inicio de sácada"].Points[i].YValues;
+                    X = chart1.Series[3].Points[i].XValue;
+                    Y = chart1.Series[3].Points[i].YValues;
                     if (X >= Xe - 10 && X <= Xe + 10 && Y[0] >= Ye - 0.8 && Y[0] <= Ye + 0.8)
                     {
                         pos = i;
                         ini = true;
-                        Pto.X = P.SacadasI[ind][pos];
-                        Pto.Y = P.SacadasYI[ind][pos];
+                        Point_T.X = P.SacadasI[ind][pos];
+                        Point_T.Y = P.SacadasYI[ind][pos];
                     }
                 }
 
-                for (int i = 0; i < chart1.Series["Fin de sácada"].Points.Count; i++)
+                for (int i = 0; i < chart1.Series[4].Points.Count; i++)
                 {
-                    X = chart1.Series["Fin de sácada"].Points[i].XValue;
-                    Y = chart1.Series["Fin de sácada"].Points[i].YValues;
+                    X = chart1.Series[4].Points[i].XValue;
+                    Y = chart1.Series[4].Points[i].YValues;
                     if (X >= Xe - 10 && X <= Xe + 10 && Y[0] >= Ye - 0.8 && Y[0] <= Ye + 0.8)
                     {
                         pos = i;
                         ini = false;
-                        Pto.X = P.SacadasF[ind][pos];
-                        Pto.Y = P.SacadasYF[ind][pos];
+                        Point_T.X = P.SacadasF[ind][pos];
+                        Point_T.Y = P.SacadasYF[ind][pos];
                     }
                 }
 
-                Pto.Pos = pos;
-                Pto.ini = ini;
+                Point_T.Pos = pos;
+                Point_T.ini = ini;
 
-                Pto.ptoSel = true;                
-                Pto.X = (int)Xe;
-                Pto.Y = P.SHorizontal[ind][(int)Xe];
+                Point_T.ptoSel = true;                
+                Point_T.X = (int)Xe;
+                Point_T.Y = P.SHorizontal[ind][(int)Xe];
             }
         }
 
         private void chart1_MouseMove(object sender, MouseEventArgs e)
         {
 
-            if (MueveP && Pto.ptoSel==true && Pto.Pos != -1)
+            if (MueveP && Point_T.ptoSel==true && Point_T.Pos != -1)
             {
                 double Xe = chart1.ChartAreas[0].AxisX.PixelPositionToValue(e.X);
                 int ind = toolStripComboBox1.SelectedIndex;
 
-                if (Pto.primera)//primera vez que se mueve el punto
+                if (Point_T.primera)//primera vez que se mueve el punto
                 {
-                    Pto.primera = false;
-                    if (Pto.ini == true)
+                    Point_T.primera = false;
+                    if (Point_T.ini == true)
                     {
-                        if (Pto.Pos == 0)
+                        if (Point_T.Pos == 0)
                         {
-                            if (Xe < P.SacadasF[ind][Pto.Pos] && Xe > 0)//condicion para la primera sacada
+                            if (Xe < P.SacadasF[ind][Point_T.Pos] && Xe > 0)//condicion para la primera sacada
                             {
-                                chart1.Series["Inicio de sácada"].Points.RemoveAt(Pto.Pos);
-                                chart1.Series["Inicio de sácada"].Points.InsertXY(0, Xe, P.SHorizontal[ind][(int)Xe]);
-                                Pto.X = (int)Xe;
-                                Pto.Y = P.SHorizontal[ind][(int)Xe];
+                                chart1.Series[3].Points.RemoveAt(Point_T.Pos);
+                                chart1.Series[3].Points.InsertXY(0, Xe, P.SHorizontal[ind][(int)Xe]);
+                                Point_T.X = (int)Xe;
+                                Point_T.Y = P.SHorizontal[ind][(int)Xe];
                             }
                         }
                         else
                         {
-                            if (Xe > P.SacadasF[ind][Pto.Pos - 1] && Xe < P.SacadasF[ind][Pto.Pos])
+                            if (Xe > P.SacadasF[ind][Point_T.Pos - 1] && Xe < P.SacadasF[ind][Point_T.Pos])
                             {
-                                chart1.Series["Inicio de sácada"].Points.RemoveAt(Pto.Pos);
-                                chart1.Series["Inicio de sácada"].Points.InsertXY(0, Xe, P.SHorizontal[ind][(int)Xe]);
-                                Pto.X = (int)Xe;
-                                Pto.Y = P.SHorizontal[ind][(int)Xe];
+                                chart1.Series[3].Points.RemoveAt(Point_T.Pos);
+                                chart1.Series[3].Points.InsertXY(0, Xe, P.SHorizontal[ind][(int)Xe]);
+                                Point_T.X = (int)Xe;
+                                Point_T.Y = P.SHorizontal[ind][(int)Xe];
                             }
                         }
                     }
                     else
                     {
-                        if (Xe > P.SacadasI[ind][Pto.Pos] && Xe < P.SacadasI[ind][Pto.Pos + 1])
+                        if (Xe > P.SacadasI[ind][Point_T.Pos] && Xe < P.SacadasI[ind][Point_T.Pos + 1])
                         {
-                            chart1.Series["Fin de sácada"].Points.RemoveAt(Pto.Pos);                            
-                            chart1.Series["Fin de sácada"].Points.InsertXY(0, Xe, P.SHorizontal[ind][(int)Xe]);
-                            Pto.X = (int)Xe;
-                            Pto.Y = P.SHorizontal[ind][(int)Xe];
+                            chart1.Series[4].Points.RemoveAt(Point_T.Pos);                            
+                            chart1.Series[4].Points.InsertXY(0, Xe, P.SHorizontal[ind][(int)Xe]);
+                            Point_T.X = (int)Xe;
+                            Point_T.Y = P.SHorizontal[ind][(int)Xe];
                         }
                     }
                     
                 }
                 else //demas veces
                 {
-                    if (Pto.ini == true)
+                    if (Point_T.ini == true)
                     {
-                        if (Pto.Pos == 0)
+                        if (Point_T.Pos == 0)
                         {
-                            if (Xe < P.SacadasF[ind][Pto.Pos] && Xe>0)//condicion para la primera sacada
+                            if (Xe < P.SacadasF[ind][Point_T.Pos] && Xe>0)//condicion para la primera sacada
                             {
-                                chart1.Series["Inicio de sácada"].Points.RemoveAt(0);
-                                chart1.Series["Inicio de sácada"].Points.InsertXY(0, Xe, P.SHorizontal[ind][(int)Xe]);
-                                Pto.X = (int)Xe;
-                                Pto.Y = P.SHorizontal[ind][(int)Xe];
+                                chart1.Series[3].Points.RemoveAt(0);
+                                chart1.Series[3].Points.InsertXY(0, Xe, P.SHorizontal[ind][(int)Xe]);
+                                Point_T.X = (int)Xe;
+                                Point_T.Y = P.SHorizontal[ind][(int)Xe];
                             }
                         }
                         else
                         {
-                            if (Xe > P.SacadasF[ind][Pto.Pos - 1] && Xe < P.SacadasF[ind][Pto.Pos])
+                            if (Xe > P.SacadasF[ind][Point_T.Pos - 1] && Xe < P.SacadasF[ind][Point_T.Pos])
                             {
-                                chart1.Series["Inicio de sácada"].Points.RemoveAt(0);
-                                chart1.Series["Inicio de sácada"].Points.InsertXY(0, Xe, P.SHorizontal[ind][(int)Xe]);
-                                Pto.X = (int)Xe;
-                                Pto.Y = P.SHorizontal[ind][(int)Xe];
+                                chart1.Series[3].Points.RemoveAt(0);
+                                chart1.Series[3].Points.InsertXY(0, Xe, P.SHorizontal[ind][(int)Xe]);
+                                Point_T.X = (int)Xe;
+                                Point_T.Y = P.SHorizontal[ind][(int)Xe];
                             }
                         }
                     }
                     else
                     {
-                        if (Xe > P.SacadasI[ind][Pto.Pos] && Xe < P.SacadasI[ind][Pto.Pos + 1])
+                        if (Xe > P.SacadasI[ind][Point_T.Pos] && Xe < P.SacadasI[ind][Point_T.Pos + 1])
                         {
-                            chart1.Series["Fin de sácada"].Points.RemoveAt(0);
-                            chart1.Series["Fin de sácada"].Points.InsertXY(0, Xe, P.SHorizontal[ind][(int)Xe]);
-                            Pto.X = (int)Xe;
-                            Pto.Y = P.SHorizontal[ind][(int)Xe];
+                            chart1.Series[4].Points.RemoveAt(0);
+                            chart1.Series[4].Points.InsertXY(0, Xe, P.SHorizontal[ind][(int)Xe]);
+                            Point_T.X = (int)Xe;
+                            Point_T.Y = P.SHorizontal[ind][(int)Xe];
                         }
                     }
                   
@@ -627,24 +627,24 @@ namespace EMAnalizer_2._0
 
         private void chart1_MouseUp(object sender, MouseEventArgs e)
         {
-            if (MueveP && Pto.ptoSel == true && Pto.Pos != -1)
+            if (MueveP && Point_T.ptoSel == true && Point_T.Pos != -1)
             {
-                Pto.ptoSel = false;
-                Pto.primera = true;
+                Point_T.ptoSel = false;
+                Point_T.primera = true;
                 double Xe = chart1.ChartAreas[0].AxisX.PixelPositionToValue(e.X);
                 int ind = toolStripComboBox1.SelectedIndex;
 
-                if (Pto.ini == true)
+                if (Point_T.ini == true)
                 {
-                    P.SacadasI[ind][Pto.Pos] = Pto.X;
-                    P.SacadasYI[ind][Pto.Pos] = P.SHorizontal[ind][Pto.X];
-                    P.SacadasTI[ind][Pto.Pos] = (float)Pto.X / P.Fs;
+                    P.SacadasI[ind][Point_T.Pos] = Point_T.X;
+                    P.SacadasYI[ind][Point_T.Pos] = P.SHorizontal[ind][Point_T.X];
+                    P.SacadasTI[ind][Point_T.Pos] = (float)Point_T.X / P.Fs;
                 }
                 else
                 {
-                    P.SacadasF[ind][Pto.Pos] = Pto.X;
-                    P.SacadasYF[ind][Pto.Pos] = P.SHorizontal[ind][Pto.X];
-                    P.SacadasTF[ind][Pto.Pos] = (float)Pto.X / P.Fs;
+                    P.SacadasF[ind][Point_T.Pos] = Point_T.X;
+                    P.SacadasYF[ind][Point_T.Pos] = P.SHorizontal[ind][Point_T.X];
+                    P.SacadasTF[ind][Point_T.Pos] = (float)Point_T.X / P.Fs;
                 }
 
                 //Repintar todo
@@ -660,7 +660,7 @@ namespace EMAnalizer_2._0
                 chart1.ChartAreas[0].CursorX.IsUserSelectionEnabled = true;
                 chart1.ChartAreas[0].CursorY.IsUserSelectionEnabled = true;
                 MueveP = false;
-                Pto.inicia();
+                Point_T.inicia();
                 
             }
         }
@@ -676,8 +676,8 @@ namespace EMAnalizer_2._0
             }
             else { chart1.Series["Señal Vertical"].Points.Clear(); }
             chart1.Series["Estímulo"].Points.DataBindY(P.SEstimulo[i]);
-            chart1.Series["Inicio de sácada"].Points.DataBindXY(P.SacadasI[i], P.SacadasYI[i]);
-            chart1.Series["Fin de sácada"].Points.DataBindXY(P.SacadasF[i], P.SacadasYF[i]);            
+            chart1.Series[3].Points.DataBindXY(P.SacadasI[i], P.SacadasYI[i]);
+            chart1.Series[4].Points.DataBindXY(P.SacadasF[i], P.SacadasYF[i]);            
 
         }
          
