@@ -134,9 +134,9 @@ namespace EMAnalizer_2._0
             return Filtrada;
         }
 
-        /*Esta funcion devuelve un arreglo con la primera derivada de la senal que se le pasa por
-         paremetros*/
-        public static float[] Derivar(float[] S)
+        
+        /* This function returns the first derivate of the array (signal) received as parameter*/
+        public static float[] Derivate(float[] S)
         {
             float[] SDerivada = new float[S.Length];
 
@@ -148,80 +148,81 @@ namespace EMAnalizer_2._0
             return SDerivada;
         }
 
-
-        public static int[] DetectaSac(float[] S, float[] E)
+		
+        /* This function perfoms the sacade detection*/
+        public static int[] SacadeDet(float[] Signal, float[] Stimulus)
         {
-            float[] DS = Derivar(S);
-            float[] DE = Derivar(E);
+            float[] DSignal = Derivate(Signal);
+            float[] DStimulus = Derivate(Stimulus);
             int cont = 0;
-            int[] PMaxDE;
-            int[] Sacadas;
-            int PMaxDS = 0;
+            int[] PMaxDStimulus;
+            int[] Sacades;
+            int PMaxDSignal = 0;
             int pto, PMinDS = 0;
 
-            for (int i = 0; i < DE.Length; i++)
+            for (int i = 0; i < DStimulus.Length; i++)
             {
-                if (DE[i] != 0) cont++;
+                if (DStimulus[i] != 0) cont++;
             }
 
-            PMaxDE = new int[cont];
-            Sacadas = new int[cont * 2];
+            PMaxDStimulus = new int[cont];
+            Sacades = new int[cont * 2];
 
             cont = 0;
-            for (int i = 0; i < DE.Length; i++)
+            for (int i = 0; i < DStimulus.Length; i++)
             {
-                if (DE[i] != 0)
+                if (DStimulus[i] != 0)
                 {
-                    PMaxDE[cont] = i;
+                    PMaxDStimulus[cont] = i;
                     cont++;
                 }
 
             }
 
-            for (int i = 0; i < PMaxDE.Length - 1; i++)
+            for (int i = 0; i < PMaxDStimulus.Length - 1; i++)
             {
-                if (DE[PMaxDE[i]] > 0)
+                if (DStimulus[PMaxDStimulus[i]] > 0)
                 {
-                    PMaxDS = PMaxDE[i];
-                    for (int j = PMaxDE[i]; j < PMaxDE[i + 1]; j++)
+                    PMaxDSignal = PMaxDStimulus[i];
+                    for (int j = PMaxDStimulus[i]; j < PMaxDStimulus[i + 1]; j++)
                     {
-                        if (DS[j] > DS[PMaxDS]) PMaxDS = j;
+                        if (DSignal[j] > DSignal[PMaxDSignal]) PMaxDSignal = j;
                     }
 
-                    Sacadas[i * 2] = MAreaTriangulo(S, PMaxDE[i], PMaxDS);
+                    Sacades[i * 2] = MAreaTriangulo(Signal, PMaxDStimulus[i], PMaxDSignal);
 
-                    PMinDS = PMaxDS;
+                    PMinDS = PMaxDSignal;
                     /*pto = (int) (PMaxDE[i + 1] - PMaxDE[i]) / 2;
                     pto = pto + PMaxDE[i];*/
-                    pto = PMaxDE[i + 1]; //determinar
-                    for (int j = PMaxDS; j < pto; j++)
+                    pto = PMaxDStimulus[i + 1]; //determinar
+                    for (int j = PMaxDSignal; j < pto; j++)
                     {
-                        if (DS[PMinDS] > DS[j] && DS[j] > 0) PMinDS = j;
+                        if (DSignal[PMinDS] > DSignal[j] && DSignal[j] > 0) PMinDS = j;
                     }
-                    Sacadas[i * 2 + 1] = MAreaTriangulo(S, PMaxDS, PMinDS + 5);
+                    Sacades[i * 2 + 1] = MAreaTriangulo(Signal, PMaxDSignal, PMinDS + 5);
                 }
                 else
                 {
-                    PMaxDS = PMaxDE[i];
-                    for (int j = PMaxDE[i]; j < PMaxDE[i + 1]; j++)
+                    PMaxDSignal = PMaxDStimulus[i];
+                    for (int j = PMaxDStimulus[i]; j < PMaxDStimulus[i + 1]; j++)
                     {
-                        if (DS[j] < DS[PMaxDS]) PMaxDS = j;
+                        if (DSignal[j] < DSignal[PMaxDSignal]) PMaxDSignal = j;
                     }
-                    Sacadas[i * 2] = MAreaTriangulo(S, PMaxDE[i], PMaxDS);
+                    Sacades[i * 2] = MAreaTriangulo(Signal, PMaxDStimulus[i], PMaxDSignal);
 
-                    PMinDS = PMaxDS;
+                    PMinDS = PMaxDSignal;
                     /*pto = (int)(PMaxDE[i + 1] - PMaxDE[i]) / 2;
                     pto = pto + PMaxDE[i];*/
-                    pto = PMaxDE[i + 1];   //determinar                 
-                    for (int j = PMaxDS; j < pto; j++)
+                    pto = PMaxDStimulus[i + 1];   //determinar                 
+                    for (int j = PMaxDSignal; j < pto; j++)
                     {
-                        if (DS[PMinDS] < DS[j] && DS[j] < 0) PMinDS = j;
+                        if (DSignal[PMinDS] < DSignal[j] && DSignal[j] < 0) PMinDS = j;
                     }
-                    Sacadas[i * 2 + 1] = MAreaTriangulo(S, PMaxDS, PMinDS + 5);
+                    Sacades[i * 2 + 1] = MAreaTriangulo(Signal, PMaxDSignal, PMinDS + 5);
                 }
             }
 
-            return Sacadas;
+            return Sacades;
         }
 
         static int MAreaTriangulo(float[] S, int inicio, int fin)
@@ -366,8 +367,8 @@ namespace EMAnalizer_2._0
                 }
 
                 //Asignación de los puntos de sacadas
-                Sacadas[i] = PDS.DetectaSac(SHorizontal[i], SEstimulo[i]);
-                CE[i] = PDS.DetectaSac(SEstimulo[i], SEstimulo[i]);
+                Sacadas[i] = PDS.SacadeDet(SHorizontal[i], SEstimulo[i]);
+                CE[i] = PDS.SacadeDet(SEstimulo[i], SEstimulo[i]);
 
                 SacadasY[i] = new float[Sacadas[i].Length];
                 SacadasT[i] = new float[Sacadas[i].Length];
@@ -717,8 +718,8 @@ namespace EMAnalizer_2._0
             int[] sacadas1, sacadas2;
             int total1, total2;
             float Cali1, Cali2;
-            sacadas1 = PDS.DetectaSac(Cal1, Est1);
-            sacadas2 = PDS.DetectaSac(Cal2, Est2);
+            sacadas1 = PDS.SacadeDet(Cal1, Est1);
+            sacadas2 = PDS.SacadeDet(Cal2, Est2);
 
             total1 = sacadas1.Length / 2;// /2 pq hay inicio y fin
             total2 = sacadas2.Length / 2;
@@ -748,7 +749,7 @@ namespace EMAnalizer_2._0
             int[] sacadas1;
             int total1;
             float Cali1;
-            sacadas1 = PDS.DetectaSac(Cal1, Est1);
+            sacadas1 = PDS.SacadeDet(Cal1, Est1);
             
 
             total1 = sacadas1.Length / 2;
@@ -768,7 +769,7 @@ namespace EMAnalizer_2._0
         }
     }
 
-    public class Estadisticas {
+    public class Statistics {
 
         //Retorna la media del arreglo (no se considera la primera sacada pq normalmente
         //contiena la mitad de la amplitud real)
