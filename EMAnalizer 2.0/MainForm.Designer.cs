@@ -38,7 +38,7 @@
         	this.menuStrip1 = new System.Windows.Forms.MenuStrip();
         	this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
         	this.abrirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-        	this.guardarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+        	this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
         	this.ediciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
         	this.eliminaPuntoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
         	this.adicionaPuntoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -101,25 +101,26 @@
         	// 
         	this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
         	        	        	this.abrirToolStripMenuItem,
-        	        	        	this.guardarToolStripMenuItem});
+        	        	        	this.saveToolStripMenuItem});
         	this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-        	this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
-        	this.archivoToolStripMenuItem.Text = "Archivo";
+        	this.archivoToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+        	this.archivoToolStripMenuItem.Text = "File";
+        	this.archivoToolStripMenuItem.Click += new System.EventHandler(this.ArchivoToolStripMenuItemClick);
         	// 
         	// abrirToolStripMenuItem
         	// 
         	this.abrirToolStripMenuItem.Image = global::EMAnalizer_2._0.Properties.Resources.abrirr;
         	this.abrirToolStripMenuItem.Name = "abrirToolStripMenuItem";
-        	this.abrirToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
-        	this.abrirToolStripMenuItem.Text = "Abrir";
+        	this.abrirToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+        	this.abrirToolStripMenuItem.Text = "Open";
         	this.abrirToolStripMenuItem.Click += new System.EventHandler(this.abrirToolStripMenuItem_Click);
         	// 
-        	// guardarToolStripMenuItem
+        	// saveToolStripMenuItem
         	// 
-        	this.guardarToolStripMenuItem.Image = global::EMAnalizer_2._0.Properties.Resources.Dibujo;
-        	this.guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
-        	this.guardarToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
-        	this.guardarToolStripMenuItem.Text = "Guardar";
+        	this.saveToolStripMenuItem.Image = global::EMAnalizer_2._0.Properties.Resources.Dibujo;
+        	this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+        	this.saveToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+        	this.saveToolStripMenuItem.Text = "Save";
         	// 
         	// ediciónToolStripMenuItem
         	// 
@@ -128,31 +129,31 @@
         	        	        	this.adicionaPuntoToolStripMenuItem,
         	        	        	this.muevePuntoToolStripMenuItem});
         	this.ediciónToolStripMenuItem.Name = "ediciónToolStripMenuItem";
-        	this.ediciónToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
-        	this.ediciónToolStripMenuItem.Text = "Edición";
+        	this.ediciónToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
+        	this.ediciónToolStripMenuItem.Text = "Edit";
         	// 
         	// eliminaPuntoToolStripMenuItem
         	// 
         	this.eliminaPuntoToolStripMenuItem.Image = global::EMAnalizer_2._0.Properties.Resources.Eliminarsacada1;
         	this.eliminaPuntoToolStripMenuItem.Name = "eliminaPuntoToolStripMenuItem";
-        	this.eliminaPuntoToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
-        	this.eliminaPuntoToolStripMenuItem.Text = "Eliminar sácada";
+        	this.eliminaPuntoToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+        	this.eliminaPuntoToolStripMenuItem.Text = "Delete sacade";
         	this.eliminaPuntoToolStripMenuItem.Click += new System.EventHandler(this.eliminaPuntoToolStripMenuItem_Click);
         	// 
         	// adicionaPuntoToolStripMenuItem
         	// 
         	this.adicionaPuntoToolStripMenuItem.Image = global::EMAnalizer_2._0.Properties.Resources.AgregarSacada1;
         	this.adicionaPuntoToolStripMenuItem.Name = "adicionaPuntoToolStripMenuItem";
-        	this.adicionaPuntoToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
-        	this.adicionaPuntoToolStripMenuItem.Text = "Insertar sácada";
+        	this.adicionaPuntoToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+        	this.adicionaPuntoToolStripMenuItem.Text = "Insert sacade";
         	this.adicionaPuntoToolStripMenuItem.Click += new System.EventHandler(this.adicionaPuntoToolStripMenuItem_Click);
         	// 
         	// muevePuntoToolStripMenuItem
         	// 
         	this.muevePuntoToolStripMenuItem.Image = global::EMAnalizer_2._0.Properties.Resources.Muevepto1;
         	this.muevePuntoToolStripMenuItem.Name = "muevePuntoToolStripMenuItem";
-        	this.muevePuntoToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
-        	this.muevePuntoToolStripMenuItem.Text = "Mover Punto";
+        	this.muevePuntoToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+        	this.muevePuntoToolStripMenuItem.Text = "Move Point";
         	this.muevePuntoToolStripMenuItem.Click += new System.EventHandler(this.muevePuntoToolStripMenuItem_Click);
         	// 
         	// verToolStripMenuItem
@@ -161,20 +162,20 @@
         	        	        	this.ejeXEnTiempoToolStripMenuItem,
         	        	        	this.mostrarSeñalVerticalToolStripMenuItem});
         	this.verToolStripMenuItem.Name = "verToolStripMenuItem";
-        	this.verToolStripMenuItem.Size = new System.Drawing.Size(36, 20);
-        	this.verToolStripMenuItem.Text = "Ver";
+        	this.verToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+        	this.verToolStripMenuItem.Text = "View";
         	// 
         	// ejeXEnTiempoToolStripMenuItem
         	// 
         	this.ejeXEnTiempoToolStripMenuItem.Name = "ejeXEnTiempoToolStripMenuItem";
-        	this.ejeXEnTiempoToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
-        	this.ejeXEnTiempoToolStripMenuItem.Text = "Eje X en segundos";
+        	this.ejeXEnTiempoToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+        	this.ejeXEnTiempoToolStripMenuItem.Text = "X Axis in seconds";
         	// 
         	// mostrarSeñalVerticalToolStripMenuItem
         	// 
         	this.mostrarSeñalVerticalToolStripMenuItem.Name = "mostrarSeñalVerticalToolStripMenuItem";
-        	this.mostrarSeñalVerticalToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
-        	this.mostrarSeñalVerticalToolStripMenuItem.Text = "Mostrar señal vertical";
+        	this.mostrarSeñalVerticalToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+        	this.mostrarSeñalVerticalToolStripMenuItem.Text = "Show vertical signal";
         	this.mostrarSeñalVerticalToolStripMenuItem.Click += new System.EventHandler(this.mostrarSeñalVerticalToolStripMenuItem_Click);
         	// 
         	// navegaciónToolStripMenuItem
@@ -183,23 +184,23 @@
         	        	        	this.pruebaSiguienteToolStripMenuItem,
         	        	        	this.pruebaAnteriorToolStripMenuItem});
         	this.navegaciónToolStripMenuItem.Name = "navegaciónToolStripMenuItem";
-        	this.navegaciónToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
-        	this.navegaciónToolStripMenuItem.Text = "Navegación";
+        	this.navegaciónToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
+        	this.navegaciónToolStripMenuItem.Text = "Navegation";
         	// 
         	// pruebaSiguienteToolStripMenuItem
         	// 
         	this.pruebaSiguienteToolStripMenuItem.Image = global::EMAnalizer_2._0.Properties.Resources.forward;
         	this.pruebaSiguienteToolStripMenuItem.Name = "pruebaSiguienteToolStripMenuItem";
-        	this.pruebaSiguienteToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
-        	this.pruebaSiguienteToolStripMenuItem.Text = "Prueba siguiente";
+        	this.pruebaSiguienteToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+        	this.pruebaSiguienteToolStripMenuItem.Text = "Next Test";
         	this.pruebaSiguienteToolStripMenuItem.Click += new System.EventHandler(this.pruebaSiguienteToolStripMenuItem_Click);
         	// 
         	// pruebaAnteriorToolStripMenuItem
         	// 
         	this.pruebaAnteriorToolStripMenuItem.Image = global::EMAnalizer_2._0.Properties.Resources.back;
         	this.pruebaAnteriorToolStripMenuItem.Name = "pruebaAnteriorToolStripMenuItem";
-        	this.pruebaAnteriorToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
-        	this.pruebaAnteriorToolStripMenuItem.Text = "Prueba anterior";
+        	this.pruebaAnteriorToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+        	this.pruebaAnteriorToolStripMenuItem.Text = "Previous test";
         	this.pruebaAnteriorToolStripMenuItem.Click += new System.EventHandler(this.pruebaAnteriorToolStripMenuItem_Click);
         	// 
         	// opcionesToolStripMenuItem
@@ -208,22 +209,22 @@
         	        	        	this.calibraciónAutomáticaToolStripMenuItem,
         	        	        	this.administrarColoresToolStripMenuItem});
         	this.opcionesToolStripMenuItem.Name = "opcionesToolStripMenuItem";
-        	this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
-        	this.opcionesToolStripMenuItem.Text = "Opciones";
+        	this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+        	this.opcionesToolStripMenuItem.Text = "Options";
         	// 
         	// calibraciónAutomáticaToolStripMenuItem
         	// 
         	this.calibraciónAutomáticaToolStripMenuItem.Checked = true;
         	this.calibraciónAutomáticaToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
         	this.calibraciónAutomáticaToolStripMenuItem.Name = "calibraciónAutomáticaToolStripMenuItem";
-        	this.calibraciónAutomáticaToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-        	this.calibraciónAutomáticaToolStripMenuItem.Text = "Calibración automática";
+        	this.calibraciónAutomáticaToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+        	this.calibraciónAutomáticaToolStripMenuItem.Text = "Automatic calibration";
         	// 
         	// administrarColoresToolStripMenuItem
         	// 
         	this.administrarColoresToolStripMenuItem.Name = "administrarColoresToolStripMenuItem";
-        	this.administrarColoresToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-        	this.administrarColoresToolStripMenuItem.Text = "Administrar colores";
+        	this.administrarColoresToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+        	this.administrarColoresToolStripMenuItem.Text = "Colors Administration";
         	// 
         	// ayudaToolStripMenuItem
         	// 
@@ -231,21 +232,21 @@
         	        	        	this.ayudaDelEMAnalizer20ToolStripMenuItem,
         	        	        	this.acercaDeEMAnalizerToolStripMenuItem});
         	this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
-        	this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
-        	this.ayudaToolStripMenuItem.Text = "Ayuda";
+        	this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+        	this.ayudaToolStripMenuItem.Text = "Help";
         	// 
         	// ayudaDelEMAnalizer20ToolStripMenuItem
         	// 
         	this.ayudaDelEMAnalizer20ToolStripMenuItem.Image = global::EMAnalizer_2._0.Properties.Resources.help;
         	this.ayudaDelEMAnalizer20ToolStripMenuItem.Name = "ayudaDelEMAnalizer20ToolStripMenuItem";
-        	this.ayudaDelEMAnalizer20ToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
-        	this.ayudaDelEMAnalizer20ToolStripMenuItem.Text = "Ayuda del EMAnalizer 2.0";
+        	this.ayudaDelEMAnalizer20ToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+        	this.ayudaDelEMAnalizer20ToolStripMenuItem.Text = "Help EMAnalizer 2.0";
         	// 
         	// acercaDeEMAnalizerToolStripMenuItem
         	// 
         	this.acercaDeEMAnalizerToolStripMenuItem.Name = "acercaDeEMAnalizerToolStripMenuItem";
-        	this.acercaDeEMAnalizerToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
-        	this.acercaDeEMAnalizerToolStripMenuItem.Text = "Acerca de EMAnalizer";
+        	this.acercaDeEMAnalizerToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+        	this.acercaDeEMAnalizerToolStripMenuItem.Text = "About EMAnalizer 2.0";
         	this.acercaDeEMAnalizerToolStripMenuItem.Click += new System.EventHandler(this.AcercaDeEMAnalizerToolStripMenuItemClick);
         	// 
         	// chart1
@@ -268,30 +269,30 @@
         	series1.ChartArea = "ChartArea1";
         	series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
         	series1.Legend = "Legend1";
-        	series1.Name = "Señal Horizontal";
+        	series1.Name = "Horizontal signal";
         	series2.ChartArea = "ChartArea1";
         	series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
         	series2.Color = System.Drawing.Color.Lime;
         	series2.Legend = "Legend1";
-        	series2.Name = "Señal Vertical";
+        	series2.Name = "Vertical signal";
         	series3.ChartArea = "ChartArea1";
         	series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
         	series3.Color = System.Drawing.Color.Red;
         	series3.Legend = "Legend1";
         	series3.MarkerSize = 8;
-        	series3.Name = "Inicio de sácada";
+        	series3.Name = "Sacade start";
         	series4.ChartArea = "ChartArea1";
         	series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
         	series4.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
         	series4.Legend = "Legend1";
         	series4.MarkerSize = 8;
-        	series4.Name = "Fin de sácada";
+        	series4.Name = "Sacade end";
         	series5.BorderWidth = 2;
         	series5.ChartArea = "ChartArea1";
         	series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
         	series5.Color = System.Drawing.Color.Orange;
         	series5.Legend = "Legend1";
-        	series5.Name = "Estímulo";
+        	series5.Name = "Stimulus";
         	this.chart1.Series.Add(series1);
         	this.chart1.Series.Add(series2);
         	this.chart1.Series.Add(series3);
@@ -529,13 +530,13 @@
         	this.ResumeLayout(false);
         	this.PerformLayout();
         }
+        private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
 
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem abrirToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem guardarToolStripMenuItem;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;

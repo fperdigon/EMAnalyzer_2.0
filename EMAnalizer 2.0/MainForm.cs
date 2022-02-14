@@ -677,6 +677,11 @@ namespace EMAnalizer_2._0
         {
         	MessageBox.Show("EMAnalyzer 2.0 es un software para el procesamiento y analisys de señales electro-oculográficas", "Acerca de EMAnalyzer 2.0", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+        
+        void ArchivoToolStripMenuItemClick(object sender, EventArgs e)
+        {
+        	
+        }
     }
 
     
