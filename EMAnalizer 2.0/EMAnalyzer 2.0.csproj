@@ -28,6 +28,7 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NoWin32Manifest>False</NoWin32Manifest>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -49,7 +50,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>EMA.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\EMA.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="FilesManager, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -169,7 +170,6 @@
     <None Include="Resources\Mueve pto.bmp" />
     <None Include="Resources\estadistica2.bmp" />
     <None Include="Resources\estadistica.bmp" />
-    <Content Include="EMA.ico" />
     <None Include="Resources\Agregar Sacada.bmp" />
     <None Include="Resources\Eliminar sacada.bmp" />
     <None Include="Resources\Agregar Sacada 1.bmp" />
