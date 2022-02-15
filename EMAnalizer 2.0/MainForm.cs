@@ -127,6 +127,9 @@ namespace EMAnalizer_2._0
             chart1.ChartAreas[0].AxisX.ScaleView.Size = ZoomX;
             chart1.ChartAreas[0].AxisY.ScaleView.Size = ZoomY;
             chart1.ChartAreas[0].AxisX.ScaleView.Position = 0;
+            
+            chart1.Series[3].Points.RemoveAt(chart1.Series[3].Points.Count - 1);
+            chart1.Series[4].Points.RemoveAt(chart1.Series[4].Points.Count - 1);
                   
         }
 
@@ -688,7 +691,10 @@ namespace EMAnalizer_2._0
             else { chart1.Series[1].Points.Clear(); }
             chart1.Series[2].Points.DataBindY(P.SEstimulo[i]);
             chart1.Series[3].Points.DataBindXY(P.SacadasI[i], P.SacadasYI[i]);
-            chart1.Series[4].Points.DataBindXY(P.SacadasF[i], P.SacadasYF[i]);            
+            chart1.Series[4].Points.DataBindXY(P.SacadasF[i], P.SacadasYF[i]);        
+			
+			chart1.Series[3].Points.RemoveAt(chart1.Series[3].Points.Count - 1);
+            chart1.Series[4].Points.RemoveAt(chart1.Series[4].Points.Count - 1);            
 
         }
          
