@@ -10,10 +10,10 @@ using Core;
 
 namespace EMAnalizer_2._0
 {
-    public partial class TableForm : Form
+    public partial class TablesForm : Form
     {        
 
-        public TableForm(Test_T test)
+        public TablesForm(Test_T test)
         {
             InitializeComponent();
 
@@ -32,7 +32,7 @@ namespace EMAnalizer_2._0
             dataGridView1.RowHeadersVisible = false;         
 
             //aqui se rellena con un for para la cantidad de sacadas
-            dataGridView1.Columns[0].Name = "Parametros";
+            dataGridView1.Columns[0].Name = "Parameter";
             int AmEst = 10;
             
             for (int j = 1; j < test.ASacadas[i].Length-1 ; j++)
@@ -86,7 +86,7 @@ namespace EMAnalizer_2._0
             dataGridView2.RowHeadersVisible = false;
 
             //aqui se rellena con un for para la cantidad de sacadas
-            dataGridView2.Columns[0].Name = "Parametros";
+            dataGridView2.Columns[0].Name = "Parameter";
             AmEst = 20;
 
             for (int j = 1; j < test.ASacadas[i].Length - 1; j++)
@@ -135,7 +135,7 @@ namespace EMAnalizer_2._0
             dataGridView3.RowHeadersVisible = false;
 
             //aqui se rellena con un for para la cantidad de sacadas
-            dataGridView3.Columns[0].Name = "Parametros";
+            dataGridView3.Columns[0].Name = "Parameter";
             AmEst = 30;
 
             for (int j = 1; j < test.ASacadas[i].Length - 1; j++)
@@ -184,7 +184,7 @@ namespace EMAnalizer_2._0
             dataGridView4.RowHeadersVisible = false;
 
             //aqui se rellena con un for para la cantidad de sacadas
-            dataGridView4.Columns[0].Name = "Parametros";
+            dataGridView4.Columns[0].Name = "Parameter";
             AmEst = 60;
 
             for (int j = 1; j < test.ASacadas[i].Length - 1; j++)

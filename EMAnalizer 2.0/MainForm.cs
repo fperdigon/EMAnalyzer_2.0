@@ -474,7 +474,7 @@ namespace EMAnalizer_2._0
             }
             else
             {
-                TableForm f = new TableForm(P);
+                TablesForm f = new TablesForm(P);
                 f.ShowDialog();
             }
         }
