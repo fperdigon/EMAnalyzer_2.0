@@ -446,8 +446,7 @@ namespace Core
             
         }
 
-        /*Este metodo se encarga de con las marcas, delimitar las pruebas
-         y crear la señal de estimulo*/
+        /* This method uses the marks to delimit tests and generate the stimulus signal*/        
         private void MRK2Estimulo(int[] Marcas, byte[] IDMarcas, PLG plg)
         {
             byte MarGhost = 125;  //Offset añadido por el Track Walker (0x7D)
@@ -529,12 +528,12 @@ namespace Core
                         if (repli10 == false)
                         {
                             repli10 = true;
-                            NomPrueba[contPru] = "Prueba 10º";
+                            NomPrueba[contPru] = "Test 10º";
                         }
                         else
                         {
                             repli10 = false;
-                            NomPrueba[contPru] = "Réplica 10º";
+                            NomPrueba[contPru] = "Replica 10º";
                         }
                     }
                     //deteccion 20g
@@ -543,12 +542,12 @@ namespace Core
                         if (repli20 == false)
                         {
                             repli20 = true;
-                            NomPrueba[contPru] = "Prueba 20º";
+                            NomPrueba[contPru] = "Test 20º";
                         }
                         else
                         {
                             repli20 = false;
-                            NomPrueba[contPru] = "Réplica 20º";
+                            NomPrueba[contPru] = "Replica 20º";
                         }
                     }
                     //deteccion 30g
@@ -557,12 +556,12 @@ namespace Core
                         if (repli30 == false)
                         {
                             repli30 = true;
-                            NomPrueba[contPru] = "Prueba 30º";
+                            NomPrueba[contPru] = "Test 30º";
                         }
                         else
                         {
                             repli30 = false;
-                            NomPrueba[contPru] = "Réplica 30º";
+                            NomPrueba[contPru] = "Replica 30º";
                         }
                     }
                     //deteccion 60g
@@ -571,12 +570,12 @@ namespace Core
                         if (repli60 == false)
                         {
                             repli60 = true;
-                            NomPrueba[contPru] = "Prueba 60º";
+                            NomPrueba[contPru] = "Test 60º";
                         }
                         else
                         {
                             repli60 = false;
-                            NomPrueba[contPru] = "Réplica 60º";
+                            NomPrueba[contPru] = "Replica 60º";
                         }
                     }
                     //deteccion de prueba aleatoria
@@ -585,12 +584,12 @@ namespace Core
                         if (repliale == false)
                         {
                             repliale = true;
-                            NomPrueba[contPru] = "Prueba aleatoria";
+                            NomPrueba[contPru] = "Test random";
                         }
                         else
                         {
                             repliale = false;
-                            NomPrueba[contPru] = "Réplica aleatoria";
+                            NomPrueba[contPru] = "Replica random";
                         }
                     }
 
