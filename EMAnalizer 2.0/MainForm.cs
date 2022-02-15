@@ -531,9 +531,17 @@ namespace EMAnalizer_2._0
                 Point_T.Pos = pos;
                 Point_T.ini = ini;
 
-                Point_T.ptoSel = true;                
-                Point_T.X = (int)Xe;
-                Point_T.Y = P.SHorizontal[ind][(int)Xe];
+                Point_T.ptoSel = true;   
+
+                if ((int)Xe < 0){
+                	Point_T.X = 0;
+					Point_T.Y = P.SHorizontal[ind][0];                	
+                }else{
+                	Point_T.X = (int)Xe;
+                	Point_T.Y = P.SHorizontal[ind][(int)Xe];
+                }                               
+                
+                
             }
         }
 
@@ -543,6 +551,9 @@ namespace EMAnalizer_2._0
             if (MueveP && Point_T.ptoSel==true && Point_T.Pos != -1)
             {
                 double Xe = chart1.ChartAreas[0].AxisX.PixelPositionToValue(e.X);
+                if (Xe < 0){
+                	Xe = 0;
+                }
                 int ind = toolStripComboBox1.SelectedIndex;
 
                 if (Point_T.primera)//primera vez que se mueve el punto
