@@ -300,7 +300,7 @@ namespace Core
                 //calibracion sacadica
                 int cantcal=0;
                 for(int ii=0;ii<NomPrueba.Length;ii++){
-                    if (NomPrueba[ii].Contains("Calibración")) { cantcal++; }
+                    if (NomPrueba[ii].Contains("calibra")) { cantcal++; }
                 }
 
                 if (cantcal == 2)
@@ -504,10 +504,10 @@ namespace Core
                     if (calibracionINI == true)
                     {
                         calibracionINI = false;
-                        NomPrueba[contPru] = "Calibración inicial 30º";
+                        NomPrueba[contPru] = "Initial calibration 30º";
                     }
                     else {
-                        NomPrueba[contPru] = "Calibración final 30º";    
+                        NomPrueba[contPru] = "Final calibration 30º";    
                     }
                    
 
