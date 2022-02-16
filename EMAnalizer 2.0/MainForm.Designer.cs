@@ -184,14 +184,14 @@
         	        	        	this.pruebaSiguienteToolStripMenuItem,
         	        	        	this.pruebaAnteriorToolStripMenuItem});
         	this.navegaciónToolStripMenuItem.Name = "navegaciónToolStripMenuItem";
-        	this.navegaciónToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
-        	this.navegaciónToolStripMenuItem.Text = "Navegation";
+        	this.navegaciónToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
+        	this.navegaciónToolStripMenuItem.Text = "Navigation";
         	// 
         	// pruebaSiguienteToolStripMenuItem
         	// 
         	this.pruebaSiguienteToolStripMenuItem.Image = global::EMAnalizer_2._0.Properties.Resources.forward;
         	this.pruebaSiguienteToolStripMenuItem.Name = "pruebaSiguienteToolStripMenuItem";
-        	this.pruebaSiguienteToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+        	this.pruebaSiguienteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
         	this.pruebaSiguienteToolStripMenuItem.Text = "Next Test";
         	this.pruebaSiguienteToolStripMenuItem.Click += new System.EventHandler(this.pruebaSiguienteToolStripMenuItem_Click);
         	// 
@@ -199,7 +199,7 @@
         	// 
         	this.pruebaAnteriorToolStripMenuItem.Image = global::EMAnalizer_2._0.Properties.Resources.back;
         	this.pruebaAnteriorToolStripMenuItem.Name = "pruebaAnteriorToolStripMenuItem";
-        	this.pruebaAnteriorToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+        	this.pruebaAnteriorToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
         	this.pruebaAnteriorToolStripMenuItem.Text = "Previous test";
         	this.pruebaAnteriorToolStripMenuItem.Click += new System.EventHandler(this.pruebaAnteriorToolStripMenuItem_Click);
         	// 

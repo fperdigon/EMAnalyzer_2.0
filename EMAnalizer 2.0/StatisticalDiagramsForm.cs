@@ -32,7 +32,7 @@ namespace EMAnalizer_2._0
             // Diagram 2            
             chart2.Series[0].Points.DataBindXY(new int[13] { -68, -54, -40, -30, -20, -12, 0, 12, 20, 30, 40, 54, 68 }, new double[13] { 380, 330, 275, 220, 140, 50, -100, 50, 140, 220, 275, 330, 380 });
             chart2.ChartAreas[0].Axes[0].Title = "Target shift (°)";
-            chart2.ChartAreas[0].Axes[1].Title = "Sacade velocity (°/s)";            
+            chart2.ChartAreas[0].Axes[1].Title = "Saccade velocity (°/s)";            
             
             // Diagram 3
             chart3.Series[0].Points.DataBindXY(new int[3] { -63, 0, 63 }, new double[3] { 8.4, 0, 8.4 });
@@ -43,7 +43,7 @@ namespace EMAnalizer_2._0
             // Diagram 4
             chart4.Series[0].Points.DataBindXY(new int[3] { -63, 0, 63 }, new double[3] {275, 200, 275 });
             chart4.ChartAreas[0].Axes[0].Title = "Target shift (°)";
-            chart4.ChartAreas[0].Axes[1].Title = "Sacade latency (ms)";
+            chart4.ChartAreas[0].Axes[1].Title = "Saccade latency (ms)";
 
             float AmEst;
             for (int i = 1; i < P.CantPruebas -1; i++) { 
