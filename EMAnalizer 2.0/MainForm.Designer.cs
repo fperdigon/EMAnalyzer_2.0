@@ -109,7 +109,7 @@
         	// 
         	// abrirToolStripMenuItem
         	// 
-        	this.abrirToolStripMenuItem.Image = global::EMAnalizer_2._0.Properties.Resources.abrirr;
+        	this.abrirToolStripMenuItem.Image = global::EMAnalizer_2._0.Properties.Resources.Open;
         	this.abrirToolStripMenuItem.Name = "abrirToolStripMenuItem";
         	this.abrirToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
         	this.abrirToolStripMenuItem.Text = "Open";
@@ -117,7 +117,7 @@
         	// 
         	// saveToolStripMenuItem
         	// 
-        	this.saveToolStripMenuItem.Image = global::EMAnalizer_2._0.Properties.Resources.Dibujo;
+        	this.saveToolStripMenuItem.Image = global::EMAnalizer_2._0.Properties.Resources.Save;
         	this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
         	this.saveToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
         	this.saveToolStripMenuItem.Text = "Save";
@@ -134,7 +134,7 @@
         	// 
         	// eliminaPuntoToolStripMenuItem
         	// 
-        	this.eliminaPuntoToolStripMenuItem.Image = global::EMAnalizer_2._0.Properties.Resources.Eliminarsacada1;
+        	this.eliminaPuntoToolStripMenuItem.Image = global::EMAnalizer_2._0.Properties.Resources.DelSaccade;
         	this.eliminaPuntoToolStripMenuItem.Name = "eliminaPuntoToolStripMenuItem";
         	this.eliminaPuntoToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
         	this.eliminaPuntoToolStripMenuItem.Text = "Delete sacade";
@@ -142,7 +142,7 @@
         	// 
         	// adicionaPuntoToolStripMenuItem
         	// 
-        	this.adicionaPuntoToolStripMenuItem.Image = global::EMAnalizer_2._0.Properties.Resources.AgregarSacada1;
+        	this.adicionaPuntoToolStripMenuItem.Image = global::EMAnalizer_2._0.Properties.Resources.AddSaccade;
         	this.adicionaPuntoToolStripMenuItem.Name = "adicionaPuntoToolStripMenuItem";
         	this.adicionaPuntoToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
         	this.adicionaPuntoToolStripMenuItem.Text = "Insert sacade";
@@ -150,7 +150,7 @@
         	// 
         	// muevePuntoToolStripMenuItem
         	// 
-        	this.muevePuntoToolStripMenuItem.Image = global::EMAnalizer_2._0.Properties.Resources.Muevepto1;
+        	this.muevePuntoToolStripMenuItem.Image = global::EMAnalizer_2._0.Properties.Resources.MovePoint;
         	this.muevePuntoToolStripMenuItem.Name = "muevePuntoToolStripMenuItem";
         	this.muevePuntoToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
         	this.muevePuntoToolStripMenuItem.Text = "Move Point";
@@ -189,7 +189,7 @@
         	// 
         	// pruebaSiguienteToolStripMenuItem
         	// 
-        	this.pruebaSiguienteToolStripMenuItem.Image = global::EMAnalizer_2._0.Properties.Resources.forward;
+        	this.pruebaSiguienteToolStripMenuItem.Image = global::EMAnalizer_2._0.Properties.Resources.Forward;
         	this.pruebaSiguienteToolStripMenuItem.Name = "pruebaSiguienteToolStripMenuItem";
         	this.pruebaSiguienteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
         	this.pruebaSiguienteToolStripMenuItem.Text = "Next Test";
@@ -197,7 +197,7 @@
         	// 
         	// pruebaAnteriorToolStripMenuItem
         	// 
-        	this.pruebaAnteriorToolStripMenuItem.Image = global::EMAnalizer_2._0.Properties.Resources.back;
+        	this.pruebaAnteriorToolStripMenuItem.Image = global::EMAnalizer_2._0.Properties.Resources.Back;
         	this.pruebaAnteriorToolStripMenuItem.Name = "pruebaAnteriorToolStripMenuItem";
         	this.pruebaAnteriorToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
         	this.pruebaAnteriorToolStripMenuItem.Text = "Previous test";
@@ -237,7 +237,7 @@
         	// 
         	// ayudaDelEMAnalizer20ToolStripMenuItem
         	// 
-        	this.ayudaDelEMAnalizer20ToolStripMenuItem.Image = global::EMAnalizer_2._0.Properties.Resources.help;
+        	this.ayudaDelEMAnalizer20ToolStripMenuItem.Image = global::EMAnalizer_2._0.Properties.Resources.Help;
         	this.ayudaDelEMAnalizer20ToolStripMenuItem.Name = "ayudaDelEMAnalizer20ToolStripMenuItem";
         	this.ayudaDelEMAnalizer20ToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
         	this.ayudaDelEMAnalizer20ToolStripMenuItem.Text = "Help EMAnalizer 2.0";
@@ -337,7 +337,7 @@
         	// toolStripButton1
         	// 
         	this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-        	this.toolStripButton1.Image = global::EMAnalizer_2._0.Properties.Resources.abrirr;
+        	this.toolStripButton1.Image = global::EMAnalizer_2._0.Properties.Resources.Open;
         	this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
         	this.toolStripButton1.Name = "toolStripButton1";
         	this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
@@ -348,7 +348,7 @@
         	// toolStripButton2
         	// 
         	this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-        	this.toolStripButton2.Image = global::EMAnalizer_2._0.Properties.Resources.Dibujo;
+        	this.toolStripButton2.Image = global::EMAnalizer_2._0.Properties.Resources.Save;
         	this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
         	this.toolStripButton2.Name = "toolStripButton2";
         	this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
@@ -363,7 +363,7 @@
         	// toolStripButton3
         	// 
         	this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-        	this.toolStripButton3.Image = global::EMAnalizer_2._0.Properties.Resources.zoom4;
+        	this.toolStripButton3.Image = global::EMAnalizer_2._0.Properties.Resources.ZoomIn;
         	this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
         	this.toolStripButton3.Name = "toolStripButton3";
         	this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
@@ -374,7 +374,7 @@
         	// toolStripButton4
         	// 
         	this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-        	this.toolStripButton4.Image = global::EMAnalizer_2._0.Properties.Resources.zoom3;
+        	this.toolStripButton4.Image = global::EMAnalizer_2._0.Properties.Resources.ZoomOut;
         	this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
         	this.toolStripButton4.Name = "toolStripButton4";
         	this.toolStripButton4.Size = new System.Drawing.Size(23, 22);
@@ -385,7 +385,7 @@
         	// toolStripButton5
         	// 
         	this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-        	this.toolStripButton5.Image = global::EMAnalizer_2._0.Properties.Resources.zoom5;
+        	this.toolStripButton5.Image = global::EMAnalizer_2._0.Properties.Resources.ZoomReset;
         	this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
         	this.toolStripButton5.Name = "toolStripButton5";
         	this.toolStripButton5.Size = new System.Drawing.Size(23, 22);
@@ -409,7 +409,7 @@
         	// toolStripButton6
         	// 
         	this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-        	this.toolStripButton6.Image = global::EMAnalizer_2._0.Properties.Resources.back;
+        	this.toolStripButton6.Image = global::EMAnalizer_2._0.Properties.Resources.Back;
         	this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
         	this.toolStripButton6.Name = "toolStripButton6";
         	this.toolStripButton6.Size = new System.Drawing.Size(23, 22);
@@ -420,7 +420,7 @@
         	// toolStripButton7
         	// 
         	this.toolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-        	this.toolStripButton7.Image = global::EMAnalizer_2._0.Properties.Resources.forward;
+        	this.toolStripButton7.Image = global::EMAnalizer_2._0.Properties.Resources.Forward;
         	this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
         	this.toolStripButton7.Name = "toolStripButton7";
         	this.toolStripButton7.Size = new System.Drawing.Size(23, 22);
@@ -436,7 +436,7 @@
         	// toolStripButton9
         	// 
         	this.toolStripButton9.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-        	this.toolStripButton9.Image = global::EMAnalizer_2._0.Properties.Resources.Eliminarsacada1;
+        	this.toolStripButton9.Image = global::EMAnalizer_2._0.Properties.Resources.DelSaccade;
         	this.toolStripButton9.ImageTransparentColor = System.Drawing.Color.Magenta;
         	this.toolStripButton9.Name = "toolStripButton9";
         	this.toolStripButton9.Size = new System.Drawing.Size(23, 22);
@@ -447,7 +447,7 @@
         	// toolStripButton10
         	// 
         	this.toolStripButton10.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-        	this.toolStripButton10.Image = global::EMAnalizer_2._0.Properties.Resources.AgregarSacada1;
+        	this.toolStripButton10.Image = global::EMAnalizer_2._0.Properties.Resources.AddSaccade;
         	this.toolStripButton10.ImageTransparentColor = System.Drawing.Color.Magenta;
         	this.toolStripButton10.Name = "toolStripButton10";
         	this.toolStripButton10.Size = new System.Drawing.Size(23, 22);
@@ -458,7 +458,7 @@
         	// toolStripButton11
         	// 
         	this.toolStripButton11.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-        	this.toolStripButton11.Image = global::EMAnalizer_2._0.Properties.Resources.Muevepto1;
+        	this.toolStripButton11.Image = global::EMAnalizer_2._0.Properties.Resources.MovePoint;
         	this.toolStripButton11.ImageTransparentColor = System.Drawing.Color.Magenta;
         	this.toolStripButton11.Name = "toolStripButton11";
         	this.toolStripButton11.Size = new System.Drawing.Size(23, 22);
@@ -474,7 +474,7 @@
         	// toolStripButton12
         	// 
         	this.toolStripButton12.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-        	this.toolStripButton12.Image = global::EMAnalizer_2._0.Properties.Resources.estadistica2;
+        	this.toolStripButton12.Image = global::EMAnalizer_2._0.Properties.Resources.Statistical;
         	this.toolStripButton12.ImageTransparentColor = System.Drawing.Color.Magenta;
         	this.toolStripButton12.Name = "toolStripButton12";
         	this.toolStripButton12.Size = new System.Drawing.Size(23, 22);
@@ -484,7 +484,7 @@
         	// toolStripButton13
         	// 
         	this.toolStripButton13.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-        	this.toolStripButton13.Image = global::EMAnalizer_2._0.Properties.Resources.Nueva_imagen__2_;
+        	this.toolStripButton13.Image = global::EMAnalizer_2._0.Properties.Resources.Tables;
         	this.toolStripButton13.ImageTransparentColor = System.Drawing.Color.Magenta;
         	this.toolStripButton13.Name = "toolStripButton13";
         	this.toolStripButton13.Size = new System.Drawing.Size(23, 22);
@@ -500,7 +500,7 @@
         	// toolStripButton8
         	// 
         	this.toolStripButton8.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-        	this.toolStripButton8.Image = global::EMAnalizer_2._0.Properties.Resources.help;
+        	this.toolStripButton8.Image = global::EMAnalizer_2._0.Properties.Resources.Help;
         	this.toolStripButton8.ImageTransparentColor = System.Drawing.Color.Magenta;
         	this.toolStripButton8.Name = "toolStripButton8";
         	this.toolStripButton8.Size = new System.Drawing.Size(23, 22);

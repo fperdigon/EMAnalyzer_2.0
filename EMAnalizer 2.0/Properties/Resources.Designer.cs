@@ -63,9 +63,9 @@ namespace EMAnalizer_2._0.Properties {
 		/// <summary>
 		///   Looks up a localized resource of type System.Drawing.Bitmap.
 		/// </summary>
-		internal static System.Drawing.Bitmap abrirr {
+		internal static System.Drawing.Bitmap About {
 			get {
-				object obj = ResourceManager.GetObject("abrirr", resourceCulture);
+				object obj = ResourceManager.GetObject("About", resourceCulture);
 				return ((System.Drawing.Bitmap)(obj));
 			}
 		}
@@ -73,9 +73,9 @@ namespace EMAnalizer_2._0.Properties {
 		/// <summary>
 		///   Looks up a localized resource of type System.Drawing.Bitmap.
 		/// </summary>
-		internal static System.Drawing.Bitmap AgregarSacada {
+		internal static System.Drawing.Bitmap AddSaccade {
 			get {
-				object obj = ResourceManager.GetObject("AgregarSacada", resourceCulture);
+				object obj = ResourceManager.GetObject("AddSaccade", resourceCulture);
 				return ((System.Drawing.Bitmap)(obj));
 			}
 		}
@@ -83,9 +83,9 @@ namespace EMAnalizer_2._0.Properties {
 		/// <summary>
 		///   Looks up a localized resource of type System.Drawing.Bitmap.
 		/// </summary>
-		internal static System.Drawing.Bitmap AgregarSacada1 {
+		internal static System.Drawing.Bitmap Back {
 			get {
-				object obj = ResourceManager.GetObject("AgregarSacada1", resourceCulture);
+				object obj = ResourceManager.GetObject("Back", resourceCulture);
 				return ((System.Drawing.Bitmap)(obj));
 			}
 		}
@@ -93,39 +93,9 @@ namespace EMAnalizer_2._0.Properties {
 		/// <summary>
 		///   Looks up a localized resource of type System.Drawing.Bitmap.
 		/// </summary>
-		internal static System.Drawing.Bitmap back {
+		internal static System.Drawing.Bitmap DelSaccade {
 			get {
-				object obj = ResourceManager.GetObject("back", resourceCulture);
-				return ((System.Drawing.Bitmap)(obj));
-			}
-		}
-		
-		/// <summary>
-		///   Looks up a localized resource of type System.Drawing.Bitmap.
-		/// </summary>
-		internal static System.Drawing.Bitmap Dibujo {
-			get {
-				object obj = ResourceManager.GetObject("Dibujo", resourceCulture);
-				return ((System.Drawing.Bitmap)(obj));
-			}
-		}
-		
-		/// <summary>
-		///   Looks up a localized resource of type System.Drawing.Bitmap.
-		/// </summary>
-		internal static System.Drawing.Bitmap Eliminarsacada {
-			get {
-				object obj = ResourceManager.GetObject("Eliminarsacada", resourceCulture);
-				return ((System.Drawing.Bitmap)(obj));
-			}
-		}
-		
-		/// <summary>
-		///   Looks up a localized resource of type System.Drawing.Bitmap.
-		/// </summary>
-		internal static System.Drawing.Bitmap Eliminarsacada1 {
-			get {
-				object obj = ResourceManager.GetObject("Eliminarsacada1", resourceCulture);
+				object obj = ResourceManager.GetObject("DelSaccade", resourceCulture);
 				return ((System.Drawing.Bitmap)(obj));
 			}
 		}
@@ -143,9 +113,9 @@ namespace EMAnalizer_2._0.Properties {
 		/// <summary>
 		///   Looks up a localized resource of type System.Drawing.Bitmap.
 		/// </summary>
-		internal static System.Drawing.Bitmap estadistica {
+		internal static System.Drawing.Bitmap Forward {
 			get {
-				object obj = ResourceManager.GetObject("estadistica", resourceCulture);
+				object obj = ResourceManager.GetObject("Forward", resourceCulture);
 				return ((System.Drawing.Bitmap)(obj));
 			}
 		}
@@ -153,9 +123,9 @@ namespace EMAnalizer_2._0.Properties {
 		/// <summary>
 		///   Looks up a localized resource of type System.Drawing.Bitmap.
 		/// </summary>
-		internal static System.Drawing.Bitmap estadistica2 {
+		internal static System.Drawing.Bitmap Help {
 			get {
-				object obj = ResourceManager.GetObject("estadistica2", resourceCulture);
+				object obj = ResourceManager.GetObject("Help", resourceCulture);
 				return ((System.Drawing.Bitmap)(obj));
 			}
 		}
@@ -163,9 +133,9 @@ namespace EMAnalizer_2._0.Properties {
 		/// <summary>
 		///   Looks up a localized resource of type System.Drawing.Bitmap.
 		/// </summary>
-		internal static System.Drawing.Bitmap forward {
+		internal static System.Drawing.Bitmap Help2 {
 			get {
-				object obj = ResourceManager.GetObject("forward", resourceCulture);
+				object obj = ResourceManager.GetObject("Help2", resourceCulture);
 				return ((System.Drawing.Bitmap)(obj));
 			}
 		}
@@ -173,9 +143,9 @@ namespace EMAnalizer_2._0.Properties {
 		/// <summary>
 		///   Looks up a localized resource of type System.Drawing.Bitmap.
 		/// </summary>
-		internal static System.Drawing.Bitmap help {
+		internal static System.Drawing.Bitmap MovePoint {
 			get {
-				object obj = ResourceManager.GetObject("help", resourceCulture);
+				object obj = ResourceManager.GetObject("MovePoint", resourceCulture);
 				return ((System.Drawing.Bitmap)(obj));
 			}
 		}
@@ -183,9 +153,9 @@ namespace EMAnalizer_2._0.Properties {
 		/// <summary>
 		///   Looks up a localized resource of type System.Drawing.Bitmap.
 		/// </summary>
-		internal static System.Drawing.Bitmap help2 {
+		internal static System.Drawing.Bitmap MovePoint1 {
 			get {
-				object obj = ResourceManager.GetObject("help2", resourceCulture);
+				object obj = ResourceManager.GetObject("MovePoint1", resourceCulture);
 				return ((System.Drawing.Bitmap)(obj));
 			}
 		}
@@ -193,9 +163,9 @@ namespace EMAnalizer_2._0.Properties {
 		/// <summary>
 		///   Looks up a localized resource of type System.Drawing.Bitmap.
 		/// </summary>
-		internal static System.Drawing.Bitmap Muevepto {
+		internal static System.Drawing.Bitmap Open {
 			get {
-				object obj = ResourceManager.GetObject("Muevepto", resourceCulture);
+				object obj = ResourceManager.GetObject("Open", resourceCulture);
 				return ((System.Drawing.Bitmap)(obj));
 			}
 		}
@@ -203,9 +173,9 @@ namespace EMAnalizer_2._0.Properties {
 		/// <summary>
 		///   Looks up a localized resource of type System.Drawing.Bitmap.
 		/// </summary>
-		internal static System.Drawing.Bitmap Muevepto1 {
+		internal static System.Drawing.Bitmap Save {
 			get {
-				object obj = ResourceManager.GetObject("Muevepto1", resourceCulture);
+				object obj = ResourceManager.GetObject("Save", resourceCulture);
 				return ((System.Drawing.Bitmap)(obj));
 			}
 		}
@@ -213,9 +183,9 @@ namespace EMAnalizer_2._0.Properties {
 		/// <summary>
 		///   Looks up a localized resource of type System.Drawing.Bitmap.
 		/// </summary>
-		internal static System.Drawing.Bitmap Nueva_imagen__2_ {
+		internal static System.Drawing.Bitmap Statistical {
 			get {
-				object obj = ResourceManager.GetObject("Nueva imagen (2)", resourceCulture);
+				object obj = ResourceManager.GetObject("Statistical", resourceCulture);
 				return ((System.Drawing.Bitmap)(obj));
 			}
 		}
@@ -223,9 +193,9 @@ namespace EMAnalizer_2._0.Properties {
 		/// <summary>
 		///   Looks up a localized resource of type System.Drawing.Bitmap.
 		/// </summary>
-		internal static System.Drawing.Bitmap zoom1 {
+		internal static System.Drawing.Bitmap Statistical2 {
 			get {
-				object obj = ResourceManager.GetObject("zoom1", resourceCulture);
+				object obj = ResourceManager.GetObject("Statistical2", resourceCulture);
 				return ((System.Drawing.Bitmap)(obj));
 			}
 		}
@@ -233,9 +203,9 @@ namespace EMAnalizer_2._0.Properties {
 		/// <summary>
 		///   Looks up a localized resource of type System.Drawing.Bitmap.
 		/// </summary>
-		internal static System.Drawing.Bitmap zoom2 {
+		internal static System.Drawing.Bitmap Tables {
 			get {
-				object obj = ResourceManager.GetObject("zoom2", resourceCulture);
+				object obj = ResourceManager.GetObject("Tables", resourceCulture);
 				return ((System.Drawing.Bitmap)(obj));
 			}
 		}
@@ -243,9 +213,9 @@ namespace EMAnalizer_2._0.Properties {
 		/// <summary>
 		///   Looks up a localized resource of type System.Drawing.Bitmap.
 		/// </summary>
-		internal static System.Drawing.Bitmap zoom3 {
+		internal static System.Drawing.Bitmap ZoomIn {
 			get {
-				object obj = ResourceManager.GetObject("zoom3", resourceCulture);
+				object obj = ResourceManager.GetObject("ZoomIn", resourceCulture);
 				return ((System.Drawing.Bitmap)(obj));
 			}
 		}
@@ -253,9 +223,9 @@ namespace EMAnalizer_2._0.Properties {
 		/// <summary>
 		///   Looks up a localized resource of type System.Drawing.Bitmap.
 		/// </summary>
-		internal static System.Drawing.Bitmap zoom4 {
+		internal static System.Drawing.Bitmap ZoomOut {
 			get {
-				object obj = ResourceManager.GetObject("zoom4", resourceCulture);
+				object obj = ResourceManager.GetObject("ZoomOut", resourceCulture);
 				return ((System.Drawing.Bitmap)(obj));
 			}
 		}
@@ -263,9 +233,9 @@ namespace EMAnalizer_2._0.Properties {
 		/// <summary>
 		///   Looks up a localized resource of type System.Drawing.Bitmap.
 		/// </summary>
-		internal static System.Drawing.Bitmap zoom5 {
+		internal static System.Drawing.Bitmap ZoomReset {
 			get {
-				object obj = ResourceManager.GetObject("zoom5", resourceCulture);
+				object obj = ResourceManager.GetObject("ZoomReset", resourceCulture);
 				return ((System.Drawing.Bitmap)(obj));
 			}
 		}
