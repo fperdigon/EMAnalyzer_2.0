@@ -1,6 +1,6 @@
 # EMAnalyzer 2.0
 
-**EMAnalyzer 2.0** is a software for video oculography signal analysis. This is especially needed for the study, diagnosis and prognosis of different central nervous system diseases. Although this CAD tool can be used for different diseases it was designed with focus on Hereditary Spinocerebellar Ataxia type 2 and saccadic tests.
+**EMAnalyzer 2.0** is a software for electro oculography signal analysis. This is especially needed for the study, diagnosis and prognosis of different central nervous system diseases. Although this CAD tool can be used for different diseases it was designed with focus on Hereditary Spinocerebellar Ataxia type 2 and saccadic tests.
 
 EMAnalyzer 2.0 is a software that I developed long ago as part of my Engineering Final Exam. It was in collaboration with the Center of Neuroscience and Signal Processing (CENPIS) Universidad de Oriente, under the supervision of professor Carlos Vázquez Seisdedos, PhD.
 
