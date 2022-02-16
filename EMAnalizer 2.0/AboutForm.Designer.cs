@@ -107,7 +107,7 @@ namespace EMAnalizer_2._0
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.button1);
-			this.Icon = global::EMAnalizer_2._0.Properties.Resources.EMA;
+			this.Icon = global::EMAnalizer_2._0.Properties.Resources.EMA_ICO;
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
 			this.Name = "AboutForm";

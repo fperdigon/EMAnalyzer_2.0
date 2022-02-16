@@ -709,6 +709,26 @@ namespace EMAnalizer_2._0
         {
         	
         }
+        
+        void ToolStripButton8Click(object sender, EventArgs e)
+        {
+			string url = "https://github.com/fperdigon/EMAnalyzer_2.0";
+			url = url.Replace("&", "^&");
+            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(url) { UseShellExecute = true });			        	
+        }
+        
+        void AyudaDelEMAnalizer20ToolStripMenuItemClick(object sender, EventArgs e)
+        {
+        	string url = "https://github.com/fperdigon/EMAnalyzer_2.0";
+			url = url.Replace("&", "^&");
+            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(url) { UseShellExecute = true });			        	        	
+        }
+        
+        void ToolStripLabel1Click(object sender, EventArgs e)
+        {
+        	AboutForm f = new AboutForm();
+        	f.ShowDialog();        	
+        }
     }
 
     

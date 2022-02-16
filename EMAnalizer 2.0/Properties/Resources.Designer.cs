@@ -103,10 +103,20 @@ namespace EMAnalizer_2._0.Properties {
 		/// <summary>
 		///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
 		/// </summary>
-		internal static System.Drawing.Icon EMA {
+		internal static System.Drawing.Icon EMA_ICO {
 			get {
-				object obj = ResourceManager.GetObject("EMA", resourceCulture);
+				object obj = ResourceManager.GetObject("EMA_ICO", resourceCulture);
 				return ((System.Drawing.Icon)(obj));
+			}
+		}
+		
+		/// <summary>
+		///   Looks up a localized resource of type System.Drawing.Bitmap.
+		/// </summary>
+		internal static System.Drawing.Bitmap EMA_PNG {
+			get {
+				object obj = ResourceManager.GetObject("EMA_PNG", resourceCulture);
+				return ((System.Drawing.Bitmap)(obj));
 			}
 		}
 		
